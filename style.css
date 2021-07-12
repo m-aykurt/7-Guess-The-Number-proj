@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-image: url(./assets/number.jpg);
+    display: flex;
+    
+    
+    
+}
+#container{
+    flex-basis: 30%;
+    justify-content: flex-end;
+    margin-left: 50%;
+    text-align: center;
+
+
+}
+.title{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.input-area{
+    padding: 5rem;
+}
+input{
+    padding:1rem ;
+    outline: none;
+    border-radius: 5px;
+
+}
+input:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 0.5px ;
+}
+
+button{
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 0.5px ;
+
+    border: 1px solid gray;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.attempt span{
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 1rem;
+    
+}
+
+.cong {
+    background-image: url("./assets/cong.jpg"); 
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
