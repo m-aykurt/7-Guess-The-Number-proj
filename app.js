@@ -5,19 +5,26 @@ let guess = 0;
 let guessBtn = document.querySelector(".guessSubmit");
 
 guessBtn.addEventListener("click", () => {
-    let y = document.querySelector(".guessNumber").value;
+    let y = Number(document.querySelector(".guessNumber").value);
     // let cong = document.querySelector(".input-area");
-
-
-    if (x == y) {
-        document.querySelector("body").classList.add("cong");
-    } else if (x > y) {
-        guess += 1
-        alert("Try greater number")
-    } else if (x < y) {
-        guess += 1
-        alert("Try smaller number")
+    const isNumber = (n) => {
+        return Number(n) === n;
     }
-    let attempt = document.querySelector(".attempt span");
-    attempt.innerHTML = guess.toString();
+    if (isNumber(y)) {
+        if (x == y) {
+            document.querySelector("body").classList.add("cong");
+            document.querySelector("#container").style.display = "none";
+            // cong.innerHTML = `You are a mindreader. This number was ${y}`
+        } else if (x > y) {
+            guess += 1
+            alert("Try greater number")
+        } else if (x < y) {
+            guess += 1
+            alert("Try smaller number")
+        }
+        let attempt = document.querySelector(".attempt span");
+        attempt.innerHTML = guess.toString();
+    } else {
+        alert("Enter a number !")
+    }
 })
